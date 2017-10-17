@@ -1,0 +1,7 @@
+D:\MS\Project\FTPUploader\FTPUploader\bin\Debug\FTPUploader.exe.config
+D:\MS\Project\FTPUploader\FTPUploader\bin\Debug\FTPUploader.exe
+D:\MS\Project\FTPUploader\FTPUploader\bin\Debug\FTPUploader.pdb
+D:\MS\Project\FTPUploader\FTPUploader\obj\Debug\FTPUploader.csprojResolveAssemblyReference.cache
+D:\MS\Project\FTPUploader\FTPUploader\obj\Debug\FTPUploader.csproj.CoreCompileInputs.cache
+D:\MS\Project\FTPUploader\FTPUploader\obj\Debug\FTPUploader.exe
+D:\MS\Project\FTPUploader\FTPUploader\obj\Debug\FTPUploader.pdb

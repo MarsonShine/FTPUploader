@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPUploader", "FTPUploader\FTPUploader.csproj", "{CF99F40D-D7A0-43FB-A79C-55AB7D750C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadImage.Test", "UploadImage.Test\UploadImage.Test.csproj", "{24C1F42B-F998-42B0-AEDB-558AADDF9D62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF99F40D-D7A0-43FB-A79C-55AB7D750C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF99F40D-D7A0-43FB-A79C-55AB7D750C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF99F40D-D7A0-43FB-A79C-55AB7D750C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF99F40D-D7A0-43FB-A79C-55AB7D750C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C1F42B-F998-42B0-AEDB-558AADDF9D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C1F42B-F998-42B0-AEDB-558AADDF9D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C1F42B-F998-42B0-AEDB-558AADDF9D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C1F42B-F998-42B0-AEDB-558AADDF9D62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {974177B7-AE6D-4250-AC9C-9A6DB8C60034}
+	EndGlobalSection
+EndGlobal

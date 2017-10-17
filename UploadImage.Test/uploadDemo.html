@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <input type="file" name="updFile" value="" accept="image/gif, image/jpeg" multiple />
+        <button>提交</button>
+    </div>
+    <div id="result">
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementsByTagName('button')[0].onclick = function () {
+                var formData = new FormData();
+                var smallImage = document.getElementsByTagName('img')[0].src;
+                var smallImage2 = document.getElementsByTagName('img')[1].src;
+                var blob = dataURLtoBlob(smallImage);
+                var blob2 = dataURLtoBlob(smallImage2)
+                var data = { avator: 1};
+                //formData.append("avator", document.getElementsByName('updFile')[0].files[0]);
+                //formData.append("avator2", document.getElementsByName('updFile')[0].files[1]);
+                //formData.append("filename", "test");
+                //formData.append("typeName", ".jpg");
+                //formData.append("location", "");
+                ajax('POST', 'upload.ashx', "avator=1&avator2=2");
+                //$.post('upload.ashx', form)
+                //    .done(function (data) {
+                //        alert(data);
+                //    });
+            }
+            document.getElementsByName('updFile')[0].onchange = function (e) {
+                for (var i = 0; i < e.target.files.length; i++) {
+                    var file = e.target.files[i];
+                    var reader = new FileReader();
+                    reader.onload = function (event) {
+                        var div = document.getElementById('result');
+                        var img = document.createElement('img');
+                        img.src = event.target.result;
+                        div.appendChild(img);
+                        document.getElementsByTagName('img')[0].src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+
+        }
+
+        function dataURLtoBlob(dataurl) {
+            var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+                bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+            while (n--) {
+                u8arr[n] = bstr.charCodeAt(n);
+            }
+            return new Blob([u8arr], { type: mime });
+        }
+        function ajax(method,url,data) {
+            var httpRequest;
+            if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+                httpRequest = new XMLHttpRequest();
+            } else if (window.ActiveXObject) { // IE 6 and older
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            httpRequest.onreadystatechange = callback;
+            httpRequest.open(method, url);
+            httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            httpRequest.send(data);
+        }
+        function callback() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    alert(httpRequest.responseText);
+                } else {
+                    alert('There was a problem with the request.');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
